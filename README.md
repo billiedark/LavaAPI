@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/-Python-0a0a0a?style=for-the-badge&logo=python&logoColor=24e387)
 
-This library was created to simplify the LAVA api [provided on the official website](https://dev.lava.ru/), in the Python programming language.
+This library was created to simplify the LAVA api [provided on the official website](https://dev.lava.ru/), in the Python programming language.\n
 Эта библиотека создана для упрощения работы с LAVA api, [предоставленной на официальном сайте](https://dev.lava.ru/), на языке программирования Python.
 
 
