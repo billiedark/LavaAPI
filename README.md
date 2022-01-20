@@ -17,7 +17,7 @@ This library was created to simplify the LAVA api [provided on the official webs
 - Creating a bill for payment - Создания счета для оплаты
 - Information about the bill - Информация о созданном счете
 
-
+  
 ## Installation - Установка
 
 [Python](https://www.python.org/) version 3.6 or higher must be installed
@@ -27,82 +27,82 @@ This library was created to simplify the LAVA api [provided on the official webs
 pip install requests
 pip install lavaapi
 ```
-
+  
 ## Using - Использование
-To get your TOKEN, you need to register in LAVA and get your key [by following this link](https://lava.ru/settings/api)
-Для получения вашего ТОКЕНА необходимо зарегистрироваться в LAVA и получить свой ключ [по этой ссылке](https://lava.ru/settings/api)
-
+To get your TOKEN, you need to register in LAVA and get your key [by following this link](https://lava.ru/settings/api)  
+Для получения вашего ТОКЕНА необходимо зарегистрироваться в LAVA и получить свой ключ [по этой ссылке](https://lava.ru/settings/api)  
+  
 API key = Token
-
+  
 ### Checking token validity - Проверка токена на валидность
-Returns True or False
+Returns True or False  
 Возвращает True или False
 ```python
 CheckWallet("YOUR_TOKEN")
 ```
-
+  
 ### Detailed validity check of the token - Подробная проверка токена на валидность
-Returns True if valid or String with error
+Returns True if valid or String with error  
 Возвращает True если валидный или String с ошибкой, если токен невалидный
 ```python
 CheckWalletDetails("YOUR_TOKEN")
 ```
-
+  
 ### Checking wallet balance - Проверка баланса кошелька
-Returns String
-Возвращает String
-
+Returns String  
+Возвращает String  
+  
 CURRENCY: "USD", "EUR" or "RUB"
 ```python
 WalletBalance("YOUR_TOKEN", "CURRENCY")
 ```
-
+  
 ### Withdrawal from a wallet - Вывод из кошелька
-Returns True or String with error
-Возвращает True или String с ошибкой
-
-ACCOUNT_ID: Your account number (For example: R10007689)
-AMOUNT: Withdrawal amount in Int
-SERVICE: "qiwi", "yoomoney", "card", "advcash", "payeer", "mobile", "perfect"
-WALLET_TO: Wallet, where the money will be withdrawn
+Returns True or String with error 
+Возвращает True или String с ошибкой  
+  
+ACCOUNT_ID: Your account number (For example: R10007689)  
+AMOUNT: Withdrawal amount in Int  
+SERVICE: "qiwi", "yoomoney", "card", "advcash", "payeer", "mobile", "perfect"  
+WALLET_TO: Wallet, where the money will be withdrawn  
 ```python
 WithdrawCreate("YOUR_TOKEN", "ACCOUNT_ID", AMOUNT, "SERVICE", "WALLET_TO")
 ```
-
+  
 Example:
 ```python
 WithdrawCreate("MY_TOKEN", "R10007689", 100, "qiwi", "88005553535")
 ```
-
+  
 ### Transfers between wallets - Переводы между кошельками
-Returns True or String with error
-Возвращает True или String с ошибкой
-
-ACCOUNT_ID: Your account number (For example: R10007689)
-AMOUNT: Transferable amount in Int
-ACCOUNT_TO: Account to which the money will be transferred
+Returns True or String with error  
+Возвращает True или String с ошибкой  
+  
+ACCOUNT_ID: Your account number (For example: R10007689)  
+AMOUNT: Transferable amount in Int  
+ACCOUNT_TO: Account to which the money will be transferred  
 ```python
 TransferCreate("YOUR_TOKEN", "ACCOUNT_ID", AMOUNT, "ACCOUNT_TO")
 ```
-
+  
 Example:
 ```python
 TransferCreate("MY_TOKEN", "R10007689", 500, "R100126592")
 ```
-
+  
 ### Transfer history of your wallet - История переводов вашего кошелька
-Returns an array of data
-Возвращает массив данных
-
-ACCOUNT_ID: Your account number (For example: R10007689)
-**TYPE: "withdraw" or "transfer"
-**LIMIT: Number of records that will be returned
-
+Returns an array of data  
+Возвращает массив данных  
+  
+ACCOUNT_ID: Your account number (For example: R10007689)  
+**TYPE: "withdraw" or "transfer"  
+**LIMIT: Number of records that will be returned  
+  
 ** - Optional parameter - Необязательный параметр
 ```python
 TransactionsList("YOUR_TOKEN", "ACCOUNT_ID", type="TRANSLATION_TYPE", limit=MAX_TRANSLATION)
 ```
-
+  
 Example:
 ```python
 myTranslations = TransactionsList("MY_TOKEN", "R10007689", limit=3)
@@ -111,6 +111,7 @@ print(myTranslations[0]["amount"], myTranslations[0]["comment"])
 ```cmd
 1230.00 Hello
 ```
+  
 Full function output:
 ```java
 [
@@ -160,26 +161,26 @@ Full function output:
     },
 ]
 ```
-
+  
 ### Creating a bill for payment - Создания счета для оплаты
-Returns Json array
-Возвращает массив Json
-
-ACCOUNT_ID: Your account number (For example: R10007689)
-AMOUNT: Transferable amount in Int
-**EXPIRE: The time in minutes after which the account will automatically close. By standard 1440
-**SUCCESSURL: Url for redirection after successful payment
-**FAILURL: Url for redirecting after unsuccessful payment
-**SUBTRACT: Who to charge the commission to (1 - Write off from the client, 0 - Write off from the store). By standard 0
-**COMMENT: Payment comment
-**MERCHANTNAME: Merchant name (displayed in the translation form)
-
+Returns Json array  
+Возвращает массив Json  
+  
+ACCOUNT_ID: Your account number (For example: R10007689)  
+AMOUNT: Transferable amount in Int  
+**EXPIRE: The time in minutes after which the account will automatically close. By standard 1440  
+**SUCCESSURL: Url for redirection after successful payment  
+**FAILURL: Url for redirecting after unsuccessful payment  
+**SUBTRACT: Who to charge the commission to (1 - Write off from the client, 0 - Write off from the store). By standard 0  
+**COMMENT: Payment comment  
+**MERCHANTNAME: Merchant name (displayed in the translation form)  
+  
 ** - Optional parameter - Необязательный параметр
 ```python
 InvoiceCreate("YOUR_TOKEN", "ACCOUNT_ID", AMOUNT, expire=None, successUrl=None,
                   failUrl=None, subtract=0, comment=None, merchantName=None)
 ```
-
+  
 Example:
 ```python
 billCreate = InvoiceCreate("MY_TOKEN", "R10007689", 150, comment="DBD20RANK")
@@ -188,7 +189,7 @@ print("Payment link:", billCreate["url"])
 ```text
 Payment link: https://p2p.lava.ru/form?id=1ee31634-e3e0-34ce-1423-b5b4cb524c6a
 ```
-
+  
 Full function output:
 ```java
 {
@@ -216,16 +217,16 @@ Full function output:
 ```
 
 ### Information about the bill - Информация о созданном счете
-Returns Json array
-Возвращает массив Json
-
-ACCOUNT_ID: Your account number (For example: R10007689)
+Returns Json array  
+Возвращает массив Json  
+  
+ACCOUNT_ID: Your account number (For example: R10007689)  
 BILL_ID: Billed number
 
 ```python
 InvoiceInfo("YOUR_TOKEN", "BILL_ID")
 ```
-
+  
 Example:
 ```python
 billCreate = InvoiceInfo("MY_TOKEN", "R10007689", "1ee31634-e3e0-34ce-1423-b5b4cb524c6a")
@@ -234,7 +235,7 @@ print(billCreate["invoice"]["comment"])
 ```text
 На бигтести с колой
 ```
-
+  
 Full function output:
 ```java
 {
@@ -264,7 +265,7 @@ Full function output:
 }
 ```
 
-
+  
 ## License
-
+  
 GNU General Public License (GPL)
