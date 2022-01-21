@@ -20,7 +20,7 @@ This library was created to simplify the LAVA api [provided on the official webs
   
 ## Installation - Установка
 
-[Python](https://www.python.org/) version 3.6 or higher must be installed
+[Python](https://www.python.org/) version 3.6 or higher must be installed  
 Необходимо установить [Python](https://www.python.org/) версии не ниже 3.6
 
 ```cmd
