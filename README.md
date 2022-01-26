@@ -269,4 +269,4 @@ Full function output:
   
 ## License
   
-GNU General Public License (GPL)
+MIT
