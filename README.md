@@ -1,4 +1,4 @@
-[![N|Solid](https://github.com/billiedark/LavaAPI/blob/main/LavaAPI.png?raw=true)](https://pypi.org/project/lavaapi/)
+[![N|Solid](https://github.com/billiedark/LavaAPI/blob/main/LavaAPI_2.png?raw=true)](https://pypi.org/project/lavaapi/)
 
 ![Python](https://img.shields.io/badge/-Python-0a0a0a?style=for-the-badge&logo=python&logoColor=24e387)
 
