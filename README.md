@@ -21,7 +21,7 @@ This library was created to simplify the LAVA api [provided on the official webs
 Необходимо установить [Python](https://www.python.org/) версии не ниже 3.6
 
 ```cmd
-pip install lavaapi
+pip install LavaAPI
 ```
 
 ## Using - Использование
