@@ -2,10 +2,10 @@
 
 ![Python](https://img.shields.io/badge/-Python-0a0a0a?style=for-the-badge&logo=python&logoColor=24e387)
 
-This library was created to simplify the LAVA api [provided on the official website](https://dev.lava.ru/), in the Python programming language.
+This library was created to simplify the LAVA api [provided on the official website](https://dev.lava.ru/), in the Python programming language.  
 Эта библиотека создана для упрощения работы с LAVA api, [предоставленной на официальном сайте](https://dev.lava.ru/), на языке программирования Python.
 
-
+  
 ## Features - Возможности
 
 - Checking token validity - Проверка токена на валидность
@@ -17,7 +17,7 @@ This library was created to simplify the LAVA api [provided on the official webs
 
 ## Installation - Установка
 
-[Python](https://www.python.org/) version 3.6 or higher must be installed
+[Python](https://www.python.org/) version 3.6 or higher must be installed  
 Необходимо установить [Python](https://www.python.org/) версии не ниже 3.6
 
 ```cmd
