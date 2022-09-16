@@ -25,10 +25,10 @@ pip install LavaAPI
 ```
 
 ## Using - Использование
-To get your TOKEN, you need to register in LAVA and get your key [by following this link](https://lava.ru/dashboard/settings/api)
+To get your TOKEN, you need to register in LAVA and get your key [by following this link](https://lava.ru/dashboard/settings/api)  
 Для получения вашего ТОКЕНА необходимо зарегистрироваться в LAVA и получить свой ключ [по этой ссылке](https://lava.ru/dashboard/settings/api)
 
-Для ясности:
+Для ясности:  
 API key = Token
 
 ### Quick example of account creation and payment verification - Быстрый пример создания счета и проверки платежа
