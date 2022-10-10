@@ -1,7 +1,8 @@
 [![N|Solid](https://github.com/billiedark/LavaAPI/blob/main/LavaAPI_v2.png?raw=true)](https://nodesource.com/products/nsolid)
 
 ![Python](https://img.shields.io/badge/-Python-0a0a0a?style=for-the-badge&logo=python&logoColor=24e387)
-
+  
+[![Stargazers repo roster for @billiedark/LavaAPI](https://reporoster.com/stars/billiedark/LavaAPI)](https://github.com/billiedark/LavaAPI/stargazers)  
 This library was created to simplify the LAVA api [provided on the official website](https://dev.lava.ru/), in the Python programming language.  
 Эта библиотека создана для упрощения работы с LAVA api, [предоставленной на официальном сайте](https://dev.lava.ru/), на языке программирования Python.
 
